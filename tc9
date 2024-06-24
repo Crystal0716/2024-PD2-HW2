@@ -1,0 +1,33 @@
+classDiagram
+    class MusicPlayer
+    MusicPlayer : -String currentSong
+    MusicPlayer : -int volume
+    MusicPlayer : +playSong(String songName) void
+    MusicPlayer : +stopSong() void
+    MusicPlayer : +increaseVolume(int increment) void
+    MusicPlayer : +decreaseVolume(int decrement) void
+    MusicPlayer : +getCurrentSong() String
+    MusicPlayer : +getVolume() int
+
+    class Song
+    Song : -String title
+    Song : -String              artist
+    Song : -int    duration
+    Song : +setTitle(String title)  void
+    Song :         +setArtist(String artist) void
+    Song :               +setDuration(int duration) void
+    Song :         +getTitle() String
+    Song :   +getArtist() String
+    Song :   +getDuration() int
+    Song : +play() void
+    Song : +pause() 
+
+    class Artist
+    Artist : -String name
+    Artist : -String genre
+    Artist : +setName(String name) void
+    Artist : +setGenre(String genre) void
+    Artist : +getName() String
+    Artist : +getGenre() String
+    Artist : +performLive()
+

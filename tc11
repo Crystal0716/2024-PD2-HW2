@@ -1,0 +1,41 @@
+classDiagram
+    class Company
+    Company : -String name
+    Company : -String address
+    Company : +setName(String name) void
+    Company : +setAddress(String address) void
+
+    class Employee {
+        +String employeeId
+        +String department
+    }
+    Employee : -double salary
+    Employee : +getSalary() double
+    Employee : +setSalary(double salary) void
+
+    class Department {
+        +String deptName
+        +String managerId
+    }
+    Department : +setDeptName(String deptName) void
+    Department : +setManagerId(String managerId) void
+
+Company : +int establishedYear
+Company : +registerEmployee(Employee employee) boolean
+Company : +terminateEmployee(String employeeId) boolean
+
+class Employee {
+    -String name
+    -int age
+    +getName() String
+    +getAge() int
+}
+Employee : +work() void
+Employee : +takeBreak() void
+
+class Department {
+    -int employeeCount
+    +increaseEmployeeCount() void
+    +decreaseEmployeeCount() void
+}
+

@@ -1,0 +1,45 @@
+classDiagram
+    class ElectronicDevice
+    ElectronicDevice : -String model
+    ElectronicDevice : -String serialNumber
+    ElectronicDevice : +powerOn() void
+    ElectronicDevice : +powerOff() void
+
+    class Smartphone {
+        +String operatingSystem
+        +int batteryCapacity
+    }
+    Smartphone : -boolean isWaterResistant
+    Smartphone : +receiveCall() void
+    Smartphone : +makeCall(String phoneNumber) void
+
+    class Technician {
+        +String technicianId
+        +String specialization
+    }
+    Technician : +repairDevice(ElectronicDevice device) boolean
+    Technician : +upgradeDevice(Smartphone smartphone) boolean
+
+ElectronicDevice : +String manufacturer
+ElectronicDevice : +setManufacturer(String manufacturer) void
+
+class Smartphone {
+    -double screenSize
+    -int storageCapacity
+    +getScreenSize() double
+    +getStorageCapacity() int
+}
+Smartphone : +installApp(String appName) void
+Smartphone : +uninstallApp(String appName) boolean
+
+class Technician {
+    -String name
+    -int yearsOfExperience
+    +getName() String
+    +getYearsOfExperience() int
+}
+Technician : +conductInspection(ElectronicDevice device) String
+
+
+
+

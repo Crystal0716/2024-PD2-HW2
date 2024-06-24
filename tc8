@@ -1,0 +1,31 @@
+classDiagram
+    class LibraryBook
+    LibraryBook : -String bookId
+    LibraryBook : -String title
+    LibraryBook : -String author
+    LibraryBook : +setTitle(String title) void
+    LibraryBook : +setAuthor(String author) void
+    LibraryBook : +getTitle() String
+    LibraryBook : +getAuthor() String
+    LibraryBook : +checkAvailability() boolean
+    LibraryBook : +lend()        
+    LibraryBook : +returnBook() void
+
+    class BorrowRecord
+    BorrowRecord : -String recordId
+    BorrowRecord : -String bookId      
+    BorrowRecord : -String borrowerId
+    BorrowRecord : -Date borrowDate    
+    BorrowRecord : +setBorrowDate(Date borrowDate) void
+    BorrowRecord : +getBorrowDate() Date
+    BorrowRecord : +markAsReturned() void
+
+    class Reader
+    Reader : -String readerId
+    Reader : -String name
+    Reader : -int borrowedBooks
+    Reader : +setName(String name) void
+    Reader : +getName() String
+    Reader : +borrowBook(String bookId) void
+    Reader : +returnBook(String bookId) boolean
+

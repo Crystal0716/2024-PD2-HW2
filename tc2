@@ -1,0 +1,4 @@
+classDiagram
+    class Car
+    Car : -int price
+    Car : +getPrice() int

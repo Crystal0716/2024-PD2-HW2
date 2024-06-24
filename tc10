@@ -1,0 +1,28 @@
+classDiagram
+    class Product
+    Product : -String productId
+    Product : -String name
+    Product : -double price
+    Product : +setName(String name) void
+    Product : +setPrice(double price) void
+    Product : +getName() String
+    Product : +getPrice() double
+    Product : +applyDiscount(double discountPercentage) void
+
+    class ShoppingCart
+    ShoppingCart : -int products
+    ShoppingCart : +addProduct(Product product) void
+    ShoppingCart : +removeProduct(Product product) boolean
+    ShoppingCart : +calculateTotal() int
+    ShoppingCart : +checkout() boolean
+
+    class Payment
+    Payment : -String paymentId
+    Payment : -double amount
+    Payment : -String method
+    Payment : +setAmount(double amount) void
+    Payment : +setMethod(String method)                 
+    Payment : +getAmount() double
+    Payment : +getMethod() String
+    Payment : +processPayment() boolean
+

@@ -1,0 +1,36 @@
+classDiagram
+   class Employee
+    Employee : -String firstName
+       Employee : -String lastName
+	    Employee : -String employeeId
+    Employee : -String department
+Employee : -int age
+    				Employee : -double salary
+    Employee : -String email
+    Employee : -String phoneNumber
+    Employee : -String   address
+    Employee : -String title
+   Employee : -boolean   isFullTime
+    Employee : +setFirstName(String firstName) void
+    Employee : +getFirstName() String
+  Employee : +setLastName(String lastName) void
+    Employee : +getLastName() String
+    Employee : +setEmployeeId(String employeeId) void
+   Employee : +getEmployeeId() String
+    Employee : +setDepartment(String department) void
+    Employee : +getDepartment() String
+     Employee : +setAge(int age) void
+    	Employee  :   +getAge() int
+    Employee : +setSalary(double salary) void
+    Employee : +getSalary() double
+    Employee : +setEmail(String email) void
+    		Employee : +getEmail() String
+    Employee : +setPhoneNumber(String phoneNumber) void
+    Employee : +getPhoneNumber() String
+    Employee : +setAddress(String address) void
+    Employee : +getAddress() String
+    Employee : +setTitle(String title) void
+    Employee : +getTitle() String
+    	Employee : +setIsFullTime(boolean isFullTime) void
+	    Employee : +getIsFullTime() boolean
+

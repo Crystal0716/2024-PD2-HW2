@@ -1,0 +1,30 @@
+classDiagram
+    class Movie
+    Movie : -String movieId
+    Movie : -String title
+    Movie : -int releaseYear
+    Movie : +setTitle(String title) void
+    Movie : +setReleaseYear(int releaseYear) void
+    Movie : +getTitle() String
+    Movie : +getReleaseYear() int
+    Movie : +addActor(Actor actor) void
+    Movie : +removeActor(Actor actor) boolean
+
+    class Director
+    Director : -String directorId
+    Director : -String name
+    Director : -int directedMovies
+    Director : +setName(String name) void
+    Director : +getName() String
+    Director : +directMovie(Movie movie) void
+
+    class Actor
+    Actor : -String actorId
+    Actor : -String name
+    Actor : -int age
+    Actor : +setName(String name) void
+    Actor : +setAge(int age) void
+    Actor : +getName() String
+    Actor : +getAge() int
+    Actor : +actInMovie(Movie movie) void
+
